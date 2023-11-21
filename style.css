@@ -1,10 +1,10 @@
 body {background-color: bisque; padding: 5%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-p {break-before: 1em;}
+p {break-before: 1em;line-height: 1.5em; padding: 8px;}
 article {font-size: 12px; break-before: 2em;}
-article img {max-width:initial;width: auto;}
+img {max-width: 600px;; width: auto;}
 nav {background-color: black; color: bisque; padding-top: 10px;padding-bottom: 10px;}
 h1, h2, h3 {color: brown;}
 ul li {color: rgb(120, 30,50);}
 form {padding: 15px; border: 1px solid red;}
 input {display: block; border-radius: 1px;}
-#text:hover {background-color: burlywood;}
+p:hover {background-color: burlywood;}
