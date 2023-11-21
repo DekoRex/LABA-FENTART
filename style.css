@@ -2,7 +2,7 @@ body {background-color: bisque; padding: 5%; font-family: 'Franklin Gothic Mediu
 p {break-before: 1em;line-height: 1.5em; padding: 8px;}
 article {font-size: 12px; break-before: 2em;}
 img {max-width: 600px;; width: auto;}
-nav {background-color: black; color: bisque; padding-top: 10px;padding-bottom: 10px;}
+nav {background-color: black; color: bisque; padding-top: 10px;padding-bottom: 10px;text-align: center;}
 h1, h2, h3 {color: brown;}
 ul li {color: rgb(120, 30,50);}
 form {padding: 15px; border: 1px solid red;}
