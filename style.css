@@ -1,10 +1,48 @@
-body {background-color: bisque; padding: 5%; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+body {background-color: bisque;margin:0px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 p {break-before: 1em;line-height: 1.5em; padding: 8px;}
-article {font-size: 12px; break-before: 2em;}
-img {max-width: 600px;; width: auto;}
+article {font-size: 12px; break-before: 2em;padding: 5%; }
+.kep img {max-width:80%;padding:10%;}
+a {text-decoration: none;font-weight: bold;}
+
 nav {background-color: black; color: bisque; padding-top: 10px;padding-bottom: 10px;text-align: center;}
 h1, h2, h3 {color: brown;}
 ul li {color: rgb(120, 30,50);}
-form {padding: 15px; border: 1px solid red;}
+
 input {display: block; border-radius: 1px;}
 p:hover {background-color: burlywood;}
+
+menu {padding-left: 0px;}
+nav ul {padding:0px; margin:0px}
+nav ul li {display:inline-block; padding:10px;border: 1px bisque solid; )
+width: 60px}
+nav ul li a {color:bisque;}
+nav ul li:hover {background-color:gray}
+
+.framed {padding: 10px; border: 1px solid black; border-radius: 3px;margin:10%}
+
+.responsive {box-sizing: border-box; float:left;width: 22%;padding:2%}
+.gallery img {max-width:100%;padding:5%;border: 1px solid black;}
+.burger {display: none;}
+a.icon {
+    background: black;
+    display: block;
+    position:relative;
+    right: 0;
+    top: 0;
+    color:bisque;;
+  }
+
+@media only screen and (max-width: 720px){
+    .kep img {width: 300px; }
+    .responsive {width: 45%;}
+    .gallery img {max-width:90%;padding:5%;}
+    #mainmenu {display: none;}
+    }
+
+@media only screen and (max-width: 360px){
+        .kep img {width: 300px; }
+        .responsive {width: 100%;}
+        .kep img, .gallery img {max-width:90%;padding:5%;}
+        #mainmenu {display: none;}
+        nav ul li {display:block;}
+        }
