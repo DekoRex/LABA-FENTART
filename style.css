@@ -22,7 +22,8 @@ nav ul li:hover {background-color:gray}
 
 .responsive {box-sizing: border-box; float:left;width: 22%;padding:2%}
 .gallery img {max-width:100%;padding:5%;border: 1px solid black;}
-.burger {display: none;}
+
+
 a.icon {
     background: black;
     display: block;
@@ -31,12 +32,17 @@ a.icon {
     top: 0;
     color:bisque;;
   }
+@media only screen and (max-width: 2500px){
+	.burger {display: none;}
+	.mainmenu{display:block;}
+}
 
 @media only screen and (max-width: 720px){
     .kep img {width: 300px; }
     .responsive {width: 45%;}
     .gallery img {max-width:90%;padding:5%;}
     #mainmenu {display: none;}
+	.burger {display: block;}
     }
 
 @media only screen and (max-width: 360px){
@@ -45,4 +51,5 @@ a.icon {
         .kep img, .gallery img {max-width:90%;padding:5%;}
         #mainmenu {display: none;}
         nav ul li {display:block;}
+        .burger {display: block;}
         }
