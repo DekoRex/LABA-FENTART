@@ -22,7 +22,38 @@
 		  x.style.display = "block";
 		}
 	  }</script>
-	
+<!-- Az a rész amely a bootstap és a stílusváltás dolgait meghívja -->
+			<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" id="ref-css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+			<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+			
+			<script>
+			jQuery(function($) {
+			$('#theme-button ul a').click(function() {
+			  if ($(this).attr('name') != 'current') {
+				var urlbeg = 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/'
+				var urlend = '/bootstrap.min.css'
+				var themeurl = urlbeg + $(this).text().toLowerCase() + urlend;
+				var link = $('link[rel="stylesheet"][href$="/bootstrap.min.css"]').attr('href', themeurl);
+		  
+				$('#theme-button ul a[name="current"]').text($(this).text());
+			  }
+			});
+		  });
+		  
+		  $(function() {
+			$('#toggle-event').change(function() {
+			  if ($(this).prop('checked')) {
+				$("#ref-css").attr("href", "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css");
+			  } else {
+				$("#ref-css").attr("href", "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css");
+			  }
+			})
+		  })
+			
+			</script>
 </head>
   <header> 
     <nav>
@@ -33,14 +64,34 @@
 			<li><a href="Gallery.html"> Galéria</a></li>
 		</ul>
     </menu>
-</div class=burger>
+<div class=burger>
 <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
   <i class="fa fa-bars"></i>
 </a>
 </div>
 
-     <!-- NAVIGÁCIÓ: <a href="#footer"> Alja</a>-->
+<!-- Téma csík -->
+<div class="navbar navbar-default navbar-static-top">
+	<div class="container-fluid">
+	  <a class="navbar-brand">Bootswatch Theme Changer</a>
+	  <div class="nav navbar-nav pull-right">
+		<li id="theme-button" class="dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Change Theme <b class="caret"></b></a>
+		  <ul class="dropdown-menu ">
+			<li><a href="#" name="cerulean">Cerulean</a></li>
+			<li><a href="#" name="cosmo">Cosmo</a></li>
+			<li><a href="#" name="cyborg">Cyborg</a></li>
+			<li><a href="#" name="darkly">Darkly</a></li>
+			<li><a href="#" name="flatly">Flatly</a></li>
+		  </ul>
+		</li>
+	  </div>
+	</div>
+  </div>
+  <input type="checkbox" id="toggle-event" data-toggle="toggle" data-on="Light" data-off="Dark">
+
+ 
   </nav>
   </header>
   <body>

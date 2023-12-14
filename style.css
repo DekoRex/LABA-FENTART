@@ -20,8 +20,12 @@ nav ul li:hover {background-color:gray}
 
 .framed {padding: 10px; border: 1px solid black; border-radius: 3px;margin:10%}
 
-.responsive {box-sizing: border-box; float:left;width: 22%;padding:2%}
+.responsive {box-sizing: border-box; float:left;width: 33%;padding:2%}
+
+.responsive:hover {width: 100%; animation: keep 5s linear 2s infinite alternate;}
+
 .gallery img {max-width:100%;padding:5%;border: 1px solid black;}
+
 .burger {display: none;}
 a.icon {
     background: black;
@@ -34,16 +38,19 @@ a.icon {
 @media only screen and (max-width: 2500px){
 	.burger {display: none;}
 	.mainmenu{display:block;}
+
 }
 
 @media only screen and (max-width: 720px){
-    .kep img {width: 300px; }
     .responsive {width: 45%;}
     .gallery img {max-width:90%;padding:5%;}
     #mainmenu {display: none;}
 	.burger {display: block;}
     }
-
+@media only screen and (max-width: 460px){
+  .kep img, .gallery img {max-width:90%;padding:5%;}
+  .responsive {width: 100%;}
+}
 @media only screen and (max-width: 360px){
         .kep img {width: 300px; }
         .responsive {width: 100%;}

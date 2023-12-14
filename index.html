@@ -10,11 +10,10 @@
 	<meta property="og:title"              content="FentArt introduce" />
 	<meta property="og:description"        content="bemutatkozó oldal" />
 	<meta property="og:image"              content="#" />
-	<link rel='stylesheet' href='bootstrap.css' type='text/css' media='all' />
+	<!-- <link rel='stylesheet' href='bootstrap.css' type='text/css' media='all' /> -->
 	<link rel='stylesheet' id='style-css'  href='style.css' type='text/css' media='all' />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	    <!-- Light Switch -->
-		<script src="switch.js"></script>
+<!-- a script amely kikapcsolja a menüt  -->
 	<script>
 	function myFunction() {
 		var x = document.getElementById("mainmenu");
@@ -23,10 +22,39 @@
 		} else {
 		  x.style.display = "block";
 		}
-	  }
-
-	  </script>
+	  }</script>
+		<!-- Az a rész amely a bootstap és a stílusváltás dolgait meghívja -->
+	 	  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" id="ref-css">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+	  
+	  <script>
+	  jQuery(function($) {
+	  $('#theme-button ul a').click(function() {
+		if ($(this).attr('name') != 'current') {
+		  var urlbeg = 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/'
+		  var urlend = '/bootstrap.min.css'
+		  var themeurl = urlbeg + $(this).text().toLowerCase() + urlend;
+		  var link = $('link[rel="stylesheet"][href$="/bootstrap.min.css"]').attr('href', themeurl);
 	
+		  $('#theme-button ul a[name="current"]').text($(this).text());
+		}
+	  });
+	});
+	
+	$(function() {
+	  $('#toggle-event').change(function() {
+		if ($(this).prop('checked')) {
+		  $("#ref-css").attr("href", "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css");
+		} else {
+		  $("#ref-css").attr("href", "https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css");
+		}
+	  })
+	})
+	  
+	  </script>
 </head>
   <header> 
     <nav id="teteje">
@@ -47,40 +75,36 @@
 		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	  		<i class="fa fa-bars"></i>
-		</a>
-	
-  </div>
+		
+		</a></div>
+<!-- Téma csík -->
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container-fluid">
+			  <a class="navbar-brand">Bootswatch Theme Changer</a>
+			  <div class="nav navbar-nav pull-right">
+				<li id="theme-button" class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Change Theme <b class="caret"></b></a>
+				  <ul class="dropdown-menu ">
+					<li><a href="#" name="cerulean">Cerulean</a></li>
+					<li><a href="#" name="cosmo">Cosmo</a></li>
+					<li><a href="#" name="cyborg">Cyborg</a></li>
+					<li><a href="#" name="darkly">Darkly</a></li>
+					<li><a href="#" name="flatly">Flatly</a></li>
+				  </ul>
+				</li>
+			  </div>
+			</div>
+		  </div>
+		  <input type="checkbox" id="toggle-event" data-toggle="toggle" data-on="Light" data-off="Dark">
+ 
  <div class="mode-changer"> 
   	<a href="javascript:void(0);" class="light" onclick="lightmode()"> 
 		<i class="fa-regular fa-circle-half-stroke fa-bounce fa-lg" ></i>
 	</a>
 </div>
-     <!-- NAVIGÁCIÓ: <a href="#footer"> Alja</a>-->
+
   </nav>
-              <!-- LIGHT SWITCH -->
-			  <div class="d-flex">
-				<div class="form-check form-switch ms-auto mt-3 me-3">
-				  <label class="form-check-label ms-3" for="lightSwitch">
-					<svg
-					  xmlns="http://www.w3.org/2000/svg"
-					  width="25"
-					  height="25"
-					  fill="currentColor"
-					  class="bi bi-brightness-high"
-					  viewBox="0 0 16 16"
-					>
-					  <path
-						d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-					  />
-					</svg>
-				  </label>
-				  <input
-					class="form-check-input"
-					type="checkbox"
-					id="lightSwitch"
-				  />
-				</div>
-			  </div>
+ 
   </header>
  
     
@@ -90,7 +114,7 @@
 	<div class="kep">
 		<img src="https://fentart.com/sites/default/files/styles/project__1200x900_/public/artvsartist.jpg">
 	</div>
-		<h1 id="#intro">Fent Győző - FentArt</h1>
+		<h1 id="intro">Fent Győző - FentArt</h1>
 	<p>Sziasztok! Régóta szeretném megfogalmazni ezt a pár bemutatkozó sort ami rólam szól, de nehezen állok neki! :) Mert hát talán magunkról beszélünk/írunk a legnehezebben?
 	Tudjuk le a lexikális köröket. Nem látszik azt mondják, de 73-as születésű vagyok, Sárbogárdon élő. Gyerekkorom óta rajzolok-festek. Mikorra elvégeztem a középiskolát, ahova amúgy azért felvételiztem, mert azt gondoltam, hogy majd ott sokat lehet rajzolni már szinte csak ez volt ami érdekelt. Egyébként építésztechnikus lettem és abban a suliban leginkább vonalzóval lehetett rajzolni. Utána volt pár nekifutásom a képzőművészeti felsőoktatás irányába de sehova nem sikerült bejutni. Úgyhogy elkezdtem a saját pályát, amiben a szüleimet ezúton is nagy köszönet illeti a támogatásért. Úgy döntöttem ha “nem kell” a tehetségem a főiskolán, akkor tanulok tovább magamtól.</p>
 
@@ -98,7 +122,7 @@
 	<p>A 90es években megismerkedtem a pasztell technikával, majd az olajfestészetbe is belekóstoltam. Ekkor tájt voltak az első kiállításaim is. Veszprémben illetve Sárbogárdon. Közben az alkalmazott grafikai tudást és a számítógépes grafikát tanultam. Készítettem egyedi jármű dekorációkat, különleges cégtáblákat kézzel festve. Ekkor készítettem az első Airbrush munkáimat is. Lemezborítók és járművek is készültek. Ez volt az az időszak mikor kezdtek egyre jobban elterjedni a nyomtatott fóliák, melyekkel árban azért nem versenyképes a kézi munka. Ekkor készültek az első nagyobb falfestéseim is. Majd következtek a kétezres évek melyek művészeti szempontból eseménytelennek mondhatók számomra ekkoriban építésztervekkel és 3D grafikával foglalkoztam, és itt indult a webfejlesztő önképzésem is. Készítettem egy időben még országos újságot is tördelőként.
 	Aztán kb 2014 től jobban felpörögtek a művészeti dolgok. Egyre több facebook kapcsolat révén jobban ráláttam a hazai és külföldi festők munkáira, megismerkedtem fantasztikus alkotókkal, akik arra inspiráltak, hogy hozzak ki többet -jobbat magamból, mutassam meg mit tudok. Talán nem kell bemutatni, hogy a kedvencem a realista ábrázolás. Szóval most 2020-ban elég sokat festek, főleg olajjal-akrillal, rengeteg képet/fotót gyűjtök melyeket meg szeretnék festeni. De mivel jobb saját élmény, saját fotó alapján dolgozni ezért a fényképészet mesterségét is kitanultam. A fottós oldalamon ott is láthattok pár munkámat.
 	</p>
-	<h3 id="colletive">Alkotói közösségek:</h3>
+	<h3 id="collective">Alkotói közösségek:</h3>
 	
 	<p>
 	A New World in Art alkotói közösség tagjaként illetve a Ceredi Alkotótábor “rezidens” művészeként rengeteg jó embert, festőt ismerhettem meg, akiktől a mai napig sokat tanulok. Különösen fontos itt kiemelnem Cene gál István festőművészt akit emberileg és szakmailag is nagyon sokra tartok. Együtt járunk kiállítani örülve a közös munkának és a látogatóknak a kiállítás megnyitókon. Szeretném ha a műveim minél több emberhez eljuthatnának, másnak is annyi örömet szerezve mint nekem az alkotónak. Kedvencem még Gulyás Lászó festőművész képei, illetve Vladimir Volegov. Egy különös véletlen folytán megismerhettem Sándorfi István fantasztikus művészetét és több kiállításán is ott lehettem. Jelenleg a lányával (Ange) éppen az emlékweblapján dolgozunk.
