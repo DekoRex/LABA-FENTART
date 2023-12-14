@@ -10,6 +10,7 @@
 	<meta property="og:title"              content="FentArt introduce" />
 	<meta property="og:description"        content="bemutatkozó oldal" />
 	<meta property="og:image"              content="#" />
+	<link rel='stylesheet' href='bootstrap.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='style-css'  href='style.css' type='text/css' media='all' />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -43,15 +44,15 @@
   </nav>
   </header>
   <body>
-    <div class="framed"> <h3>Cikk küldése ismerősnek</h3>
+    <div class="mb-3 framed"> <h3>Cikk küldése ismerősnek</h3>
         <form action="" name="Cikk küldése ismerősnek">
         <div>
-            <label for="nev">Név:</label> <input type="text" name="név" id="nev" required>
-            <label for="tel">Telefonszám:</label><input type="tel" name="tel" id="tel">
-            <label for="E-mail">E-mail cím:</label><input type="email" name="email" id="E-mail"required>
-            <label for="kora">Kora:</label><input type="number" name="kor" id="kora">
-            <label for="message">Üzenet:</label><input type="text" name="message" id="message">
-            <button type="submit" >Elküld</button>
+            <label class="form-label" for="nev">Név:</label> <input type="text" class="form-control" name="név" id="nev" required>
+            <label class="form-label" for="tel">Telefonszám:</label><input type="tel" class="form-control" name="tel" id="tel">
+            <label class="form-label" for="E-mail">E-mail cím:</label><input type="email" class="form-control" name="email" id="E-mail"required>
+            <label class="form-label" for="kora">Kora:</label><input type="number" class="form-control" name="kor" id="kora">
+            <label class="form-label" for="message">Üzenet:</label><input type="text" class="form-control" name="message" id="message">
+            <button class="btn btn-primary" type="submit" >Elküld</button>
         </button>
         
         </div>
