@@ -1,174 +1,293 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FentArt Introduce</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:url"                content="http://www.fentart.com/" />
-	<meta property="og:type"               content="article" />
-	<meta property="og:title"              content="FentArt introduce" />
-	<meta property="og:description"        content="bemutatkozó oldal" />
-	<meta property="og:image"              content="#" />
-	<link rel='stylesheet' href='bootstrap.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='style-css'  href='style.css' type='text/css' media='all' />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- a script amely kikapcsolja a menüt  -->
-	<script>
-	function myFunction() {
-		var x = document.getElementById("mainmenu");
-		if (x.style.display === "block") {
-		  x.style.display = "none";
-		} else {
-		  x.style.display = "block";
-		}
-	  }</script>
-
-
-</head>
-  <header> 
-
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FentArt Introduce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="http://www.fentart.com/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FentArt introduce" />
+    <meta property="og:description" content="bemutatkozó oldal" />
+    <meta property="og:image" content="#" />
+    <link rel="stylesheet" href="bootstrap.css" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- a script amely kikapcsolja a menüt  -->
+    <script>
+      function menuoff() {
+        const menustate = document.getElementById("mainmenu");
+        if (menustate.style.display === "block") {
+          menustate.style.display = "none";
+        } else {
+          menustate.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <header>
     <nav id="teteje">
-		<menu id="mainmenu">
-			<ul>
-			<li><a href="#intro"> bemutatkozás</a></li>
-			<li><a href="#rajz"> Rajzolás festészet</a></li>
-			<li><a href="#collective"> Közösségek</a></li>
-			<li><a href="#mural"> Falfestés</a></li>
-			<li><a href="#exhib"> kiállítások</a></li>
-			<li><a href="#foto"> fotózás</a></li>
-			<li><a href="#web"> webdesign</a></li>
-			<li><a href="gallery.html"> Galéria</a></li>
-			<li><a href="contact.html"> Kontakt</a></li>
-		</ul>
-	</menu>
+      <menu id="mainmenu">
+        <ul>
+          <li><a href="#intro"> bemutatkozás</a></li>
+          <li><a href="#rajz"> Rajzolás festészet</a></li>
+          <li><a href="#collective"> Közösségek</a></li>
+          <li><a href="#mural"> Falfestés</a></li>
+          <li><a href="#exhib"> kiállítások</a></li>
+          <li><a href="#foto"> fotózás</a></li>
+          <li><a href="#web"> webdesign</a></li>
+          <li><a href="gallery.html"> Galéria</a></li>
+          <li><a href="contact.html"> Kontakt</a></li>
+        </ul>
+      </menu>
 
-	<div class="burger">
-		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-	  		<i class="fa fa-bars"></i>
-		</a>
-	</div>
-		<!-- Téma választó -->
-		<div class="mg-toolbar">Témaválasztó: 
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="dark" type="radio" name="THEME" value="dark"><label for="Dark">Dark</label>	</div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">		
-			  <input class="theme-list" id="red" type="radio" name="THEME" value="red"><label for="Red">Red</label></div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="normal" type="radio" name="THEME" value="normal"><label for="Normal">Normal</label></div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="blue" type="radio" name="THEME" value="blue"><label for="Blue">Blue</label></div>
-		  </div>
-		<!-- Téma választó -->
-  </nav>
- 
+      <div class="burger">
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="menuoff()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- Téma választó -->
+      <div class="mg-toolbar">
+        Témaválasztó:
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="dark"
+            type="radio"
+            name="THEME"
+            value="dark"
+          /><label for="Dark">Dark</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="red"
+            type="radio"
+            name="THEME"
+            value="red"
+          /><label for="Red">Red</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="normal"
+            type="radio"
+            name="THEME"
+            value="normal"
+          /><label for="Normal">Normal</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="blue"
+            type="radio"
+            name="THEME"
+            value="blue"
+          /><label for="Blue">Blue</label>
+        </div>
+      </div>
+      <!-- Téma választó -->
+    </nav>
   </header>
+  <!-- olvasási idő kiíratása  
+	-	szavak száma a dokumentumban változóban eltárolni
+	- osztani 200-al, 
+	- a tört szám első fele a hátralévő perceket jelenti
+	- kiírni a változót  -->
+  <script>
+    const article = document.querySelector("article");
+    const wordsPerMinute = 200;
+    const wordCount = article.innerText.split(" ").length;
+    const readingTimeMinutes = Math.ceil(wordCount / wordsPerMinute);
+    article.insertAdjacentHTML(
+      "beforeend",
+      `<p style="font-weight: bold;">Az olvasási idő: ${readingTimeMinutes} perc</p>`
+    );
+  </script>
+  <!--  Nég nem jó a megoldás, dolgozom rajta  -->
+  <body>
+    <article class="container-fluid">
+      <div class="kep image">
+        <img src="https://fentart.com/sites/default/files/artvs-1.jpg" />
+      </div>
+      <section id="intro">
+        <h1>Fent Győző - FentArt</h1>
+        <p>
+          Sziasztok! Régóta szeretném megfogalmazni ezt a pár bemutatkozó sort
+          ami rólam szól, de nehezen állok neki! :) Mert hát talán magunkról
+          beszélünk/írunk a legnehezebben? Tudjuk le a lexikális köröket. Nem
+          látszik azt mondják, de 73-as születésű vagyok, Sárbogárdon élő.
+          Gyerekkorom óta rajzolok-festek. Mikorra elvégeztem a középiskolát,
+          ahova amúgy azért felvételiztem, mert azt gondoltam, hogy majd ott
+          sokat lehet rajzolni már szinte csak ez volt ami érdekelt. Egyébként
+          építésztechnikus lettem és abban a suliban leginkább vonalzóval
+          lehetett rajzolni. Utána volt pár nekifutásom a képzőművészeti
+          felsőoktatás irányába de sehova nem sikerült bejutni. Úgyhogy
+          elkezdtem a saját pályát, amiben a szüleimet ezúton is nagy köszönet
+          illeti a támogatásért. Úgy döntöttem ha “nem kell” a tehetségem a
+          főiskolán, akkor tanulok tovább magamtól.
+        </p>
+      </section>
+      <section id="rajz">
+        <h2>Rajz - festészet</h2>
+        <p>
+          A 90es években megismerkedtem a pasztell technikával, majd az
+          olajfestészetbe is belekóstoltam. Ekkor tájt voltak az első
+          kiállításaim is. Veszprémben illetve Sárbogárdon. Közben az
+          alkalmazott grafikai tudást és a számítógépes grafikát tanultam.
+          Készítettem egyedi jármű dekorációkat, különleges cégtáblákat kézzel
+          festve. Ekkor készítettem az első Airbrush munkáimat is. Lemezborítók
+          és járművek is készültek. Ez volt az az időszak mikor kezdtek egyre
+          jobban elterjedni a nyomtatott fóliák, melyekkel árban azért nem
+          versenyképes a kézi munka. Ekkor készültek az első nagyobb
+          falfestéseim is. Majd következtek a kétezres évek melyek művészeti
+          szempontból eseménytelennek mondhatók számomra ekkoriban
+          építésztervekkel és 3D grafikával foglalkoztam, és itt indult a
+          webfejlesztő önképzésem is. Készítettem egy időben még országos
+          újságot is tördelőként. Aztán kb 2014 től jobban felpörögtek a
+          művészeti dolgok. Egyre több facebook kapcsolat révén jobban ráláttam
+          a hazai és külföldi festők munkáira, megismerkedtem fantasztikus
+          alkotókkal, akik arra inspiráltak, hogy hozzak ki többet -jobbat
+          magamból, mutassam meg mit tudok. Talán nem kell bemutatni, hogy a
+          kedvencem a realista ábrázolás. Szóval most 2020-ban elég sokat
+          festek, főleg olajjal-akrillal, rengeteg képet/fotót gyűjtök melyeket
+          meg szeretnék festeni. De mivel jobb saját élmény, saját fotó alapján
+          dolgozni ezért a fényképészet mesterségét is kitanultam. A fottós
+          oldalamon ott is láthattok pár munkámat.
+        </p>
+      </section>
+      <section id="collective">
+        <h3>Alkotói közösségek:</h3>
+        <p>
+          A New World in Art alkotói közösség tagjaként illetve a Ceredi
+          Alkotótábor “rezidens” művészeként rengeteg jó embert, festőt
+          ismerhettem meg, akiktől a mai napig sokat tanulok. Különösen fontos
+          itt kiemelnem Cene gál István festőművészt akit emberileg és
+          szakmailag is nagyon sokra tartok. Együtt járunk kiállítani örülve a
+          közös munkának és a látogatóknak a kiállítás megnyitókon. Szeretném ha
+          a műveim minél több emberhez eljuthatnának, másnak is annyi örömet
+          szerezve mint nekem az alkotónak. Kedvencem még Gulyás Lászó
+          festőművész képei, illetve Vladimir Volegov. Egy különös véletlen
+          folytán megismerhettem Sándorfi István fantasztikus művészetét és több
+          kiállításán is ott lehettem. Jelenleg a lányával (Ange) éppen az
+          emlékweblapján dolgozunk.
+        </p>
+      </section>
+      <section id="mural">
+        <h3>Falfestészet (Murals)</h3>
+        <p>
+          Az emberiség már a barlangrajzok óta pingálja a falakat, ebből a
+          buliból én sem maradhattam ki! :) Országszerte több nyilvános és
+          privát térben megtekinthetők a munkáim. 1-120m2 es nagyságban
+        </p>
+      </section>
+      <section id="aktual">
+        <h3>Aktuális festészeti irány</h3>
+        <p>
+          Jelenleg a festészetben a két dolog foglalkoztat. A tárgyak körüli
+          levegő, atmoszféra festése, illetve a ralisztikus ábrázolás harmonikus
+          kombinálása az impresszionista hátterekkel.
+        </p>
+      </section>
+      <section id="exhib">
+        <h2>Kiállításaimból:</h2>
+        <ul>
+          <li>
+            New world in Art kiállítások: (2017)Budapest, (2017) Mohács, (2017)
+            Szigetszentmiklós , (2018) Csömör, (2018) Tata, (2018)
+            Sátoraljaújhely, (2019) Győr, (2018) Budapest, (2022) Budapest Volvo
+            galéria
+          </li>
 
-  
-<body>
-	<article class="container-fluid">
-	<div class="kep image">
-		<img src="https://fentart.com/sites/default/files/artvs-1.jpg">
-	</div>
-	<section id="intro">
-		<h1>Fent Győző - FentArt</h1>
-		<p>Sziasztok! Régóta szeretném megfogalmazni ezt a pár bemutatkozó sort ami rólam szól, de nehezen állok neki! :) Mert hát talán magunkról beszélünk/írunk a legnehezebben?
-		Tudjuk le a lexikális köröket. Nem látszik azt mondják, de 73-as születésű vagyok, Sárbogárdon élő. Gyerekkorom óta rajzolok-festek. Mikorra elvégeztem a középiskolát, ahova amúgy azért felvételiztem, mert azt gondoltam, hogy majd ott sokat lehet rajzolni már szinte csak ez volt ami érdekelt. Egyébként építésztechnikus lettem és abban a suliban leginkább vonalzóval lehetett rajzolni. Utána volt pár nekifutásom a képzőművészeti felsőoktatás irányába de sehova nem sikerült bejutni. Úgyhogy elkezdtem a saját pályát, amiben a szüleimet ezúton is nagy köszönet illeti a támogatásért. Úgy döntöttem ha “nem kell” a tehetségem a főiskolán, akkor tanulok tovább magamtól.</p>
-	</section>
-	<section id="rajz">
-		<h2 >Rajz - festészet</h2>
-		<p>A 90es években megismerkedtem a pasztell technikával, majd az olajfestészetbe is belekóstoltam. Ekkor tájt voltak az első kiállításaim is. Veszprémben illetve Sárbogárdon. Közben az alkalmazott grafikai tudást és a számítógépes grafikát tanultam. Készítettem egyedi jármű dekorációkat, különleges cégtáblákat kézzel festve. Ekkor készítettem az első Airbrush munkáimat is. Lemezborítók és járművek is készültek. Ez volt az az időszak mikor kezdtek egyre jobban elterjedni a nyomtatott fóliák, melyekkel árban azért nem versenyképes a kézi munka. Ekkor készültek az első nagyobb falfestéseim is. Majd következtek a kétezres évek melyek művészeti szempontból eseménytelennek mondhatók számomra ekkoriban építésztervekkel és 3D grafikával foglalkoztam, és itt indult a webfejlesztő önképzésem is. Készítettem egy időben még országos újságot is tördelőként.
-		Aztán kb 2014 től jobban felpörögtek a művészeti dolgok. Egyre több facebook kapcsolat révén jobban ráláttam a hazai és külföldi festők munkáira, megismerkedtem fantasztikus alkotókkal, akik arra inspiráltak, hogy hozzak ki többet -jobbat magamból, mutassam meg mit tudok. Talán nem kell bemutatni, hogy a kedvencem a realista ábrázolás. Szóval most 2020-ban elég sokat festek, főleg olajjal-akrillal, rengeteg képet/fotót gyűjtök melyeket meg szeretnék festeni. De mivel jobb saját élmény, saját fotó alapján dolgozni ezért a fényképészet mesterségét is kitanultam. A fottós oldalamon ott is láthattok pár munkámat.
-	</p>
-	</section>
-<section id="collective">
-	<h3>Alkotói közösségek:</h3>
-	<p>	A New World in Art alkotói közösség tagjaként illetve a Ceredi Alkotótábor “rezidens” művészeként rengeteg jó embert, festőt ismerhettem meg, akiktől a mai napig sokat tanulok. Különösen fontos itt kiemelnem Cene gál István festőművészt akit emberileg és szakmailag is nagyon sokra tartok. Együtt járunk kiállítani örülve a közös munkának és a látogatóknak a kiállítás megnyitókon. Szeretném ha a műveim minél több emberhez eljuthatnának, másnak is annyi örömet szerezve mint nekem az alkotónak. Kedvencem még Gulyás Lászó festőművész képei, illetve Vladimir Volegov. Egy különös véletlen folytán megismerhettem Sándorfi István fantasztikus művészetét és több kiállításán is ott lehettem. Jelenleg a lányával (Ange) éppen az emlékweblapján dolgozunk.
-	</p>
-</section>
-<section id="mural">
-	<h3>Falfestészet (Murals)</h3>
-	<p>
-		Az emberiség már a barlangrajzok óta pingálja a falakat, ebből a buliból én sem maradhattam ki! :) Országszerte több nyilvános és privát térben megtekinthetők a munkáim. 1-120m2 es nagyságban
-	</p>
-</section>
-<section id="aktual">
-		<h3 >Aktuális festészeti irány</h3>
-	<p>
-	Jelenleg a festészetben a két dolog foglalkoztat. A tárgyak körüli levegő, atmoszféra festése, illetve a ralisztikus ábrázolás harmonikus kombinálása az impresszionista hátterekkel.
-	</p>
-</section>
-<section id="exhib">
-<h2 >Kiállításaimból:</h2> 
-<ul>
-	<li>New world in Art kiállítások: (2017)Budapest, (2017) Mohács, (2017) Szigetszentmiklós , (2018) Csömör, (2018) Tata, (2018) Sátoraljaújhely, (2019) Győr, (2018) Budapest, (2022) Budapest Volvo galéria</li>
-	
-	<li>Ceredi alkotótábor: (2017) Szlovákia, (2019) Rimaszombat</li>
-</ul>
-	<h3>Egyéni kiállítások:</h3>
-	<ul>
-	<li>2018 november 10-től egyéni kiállításon tekinthetők meg a képeim a Kőrösi Csoma Galériában Budapesten.</li>
-	<li>2019 Július 26-tól Fonyódon a Feng Shui galériában</li>
-	
-	<li>2019 Szeptember 1- Tata, Kristály Imperial hotel</li>
-	
-	<li>2019-2020 Rétimajor Halászcsárda</li>
-	
-	<li>2021 nov-dec Budapest Unio Gallery Europe</li>
-	
-	<li>2022 március- április Tata, Kristály Imperial hotel</li>
-	
-	<li>2022 November Volvo</li></ul>
-</section>
-<section  id="foto">
-<h3>Fényképészet</h3>
-	
-	<p> csak azért, hogy segítse a festészeti munkát, aztán egyre inkább szenvedéllyé vált a fotózás. Tudásomat workshopokon, és neves fotósok segítségével fejlesztettem. Emlékezetes volt Szipál Péterrel és Harza Tamással dolgozni. A Magyar Modellfotós egyesület fotózásain is rendszeresen részt veszek amikor időm engedi. Ezekből a munkákból inkább a 18+ menüpont alatt láthattok. Az egyesületben már 2016 óta tag vagyok. Nagy kedvencem a természetjárás és a természeti környezet fényképezése is.
-	
-	2019 februártban hivatásos fényképész vizsgát is tettem, mint Fényképész és fototermék kereskedő.</p>
-	
-	<h4>Aktuális szolgáltatásaim fotózásban:</h4>
-	<ul>
-		<li>Esküvői és rendezvény fotózás</li>
-		<li>Videófelvételek készítése</li>
-		<li>Drónfelvételek és videók készítése</li>
-		<li>Ételfotózás</li>
-		<li>Portré fotózás</li>
+          <li>Ceredi alkotótábor: (2017) Szlovákia, (2019) Rimaszombat</li>
+        </ul>
+        <h3>Egyéni kiállítások:</h3>
+        <ul>
+          <li>
+            2018 november 10-től egyéni kiállításon tekinthetők meg a képeim a
+            Kőrösi Csoma Galériában Budapesten.
+          </li>
+          <li>2019 Július 26-tól Fonyódon a Feng Shui galériában</li>
 
-	</ul>
-</section>
-<section>
-	<h2 id="web">Webtervezés</h2>
-	<p>Már az internet születésétől izgatott, hogy milyen lehet készíteni a netet. Először a klasszikus HTML oldalakat készítettem, majd a macromedia flash
-		hozta meg az áttörést, mellyel már érdekesebb, és minden böngészőben hasonlóan kinéző oldalakat lehetett készíteni.
-		Aztán kb 18 éve megismerkedtem a tartalomezelő rendszerek világával és a DRUPAL rendszer mellett döntöttem. Így lettem a DRUPAL magyarország közösség lelkes tagja.
-		...folytköv
-		
-	</p>
+          <li>2019 Szeptember 1- Tata, Kristály Imperial hotel</li>
 
-</section>
-<section id="unreal">
-	<h2>UNREAL ENGINE</h2>
-	<p>Építészeti munkáim megkönnyítője ...folytköv </p>
-</section>
-<section id="work">
-	<h2>Aktuális munkahely:</h2>
-	
-	Aranyponty Zrt. - manager
-	
-	Napi faladataim: Marketing kommunikáció, fotózás-videózás, webszerkesztés, Facebook kommunikáció, nyomdai anyagok tördelése, építészeti-vízügyi tervezés, kivitelezés, beruházás előkészítés, pályázatok végigvitele. Kiállítások-kampányok tervezése és kivitelezése.  
-</section>
-</article>
+          <li>2019-2020 Rétimajor Halászcsárda</li>
 
-</body>
-<footer>
-	<nav>
-		<a id="footer"></a>
-		NAVIGÁCIÓ: <a href="#teteje"> Teteje</a>
-	</nav>
-</footer>
+          <li>2021 nov-dec Budapest Unio Gallery Europe</li>
+
+          <li>2022 március- április Tata, Kristály Imperial hotel</li>
+
+          <li>2022 November Volvo</li>
+        </ul>
+      </section>
+      <section id="foto">
+        <h3>Fényképészet</h3>
+
+        <p>
+          csak azért, hogy segítse a festészeti munkát, aztán egyre inkább
+          szenvedéllyé vált a fotózás. Tudásomat workshopokon, és neves fotósok
+          segítségével fejlesztettem. Emlékezetes volt Szipál Péterrel és Harza
+          Tamással dolgozni. A Magyar Modellfotós egyesület fotózásain is
+          rendszeresen részt veszek amikor időm engedi. Ezekből a munkákból
+          inkább a 18+ menüpont alatt láthattok. Az egyesületben már 2016 óta
+          tag vagyok. Nagy kedvencem a természetjárás és a természeti környezet
+          fényképezése is. 2019 februártban hivatásos fényképész vizsgát is
+          tettem, mint Fényképész és fototermék kereskedő.
+        </p>
+
+        <h4>Aktuális szolgáltatásaim fotózásban:</h4>
+        <ul>
+          <li>Esküvői és rendezvény fotózás</li>
+          <li>Videófelvételek készítése</li>
+          <li>Drónfelvételek és videók készítése</li>
+          <li>Ételfotózás</li>
+          <li>Portré fotózás</li>
+        </ul>
+      </section>
+      <section>
+        <h2 id="web">Webtervezés</h2>
+        <p>
+          Már az internet születésétől izgatott, hogy milyen lehet készíteni a
+          netet. Először a klasszikus HTML oldalakat készítettem, majd a
+          macromedia flash hozta meg az áttörést, mellyel már érdekesebb, és
+          minden böngészőben hasonlóan kinéző oldalakat lehetett készíteni.
+          Aztán kb 18 éve megismerkedtem a tartalomezelő rendszerek világával és
+          a DRUPAL rendszer mellett döntöttem. Így lettem a DRUPAL magyarország
+          közösség lelkes tagja. ...folytköv
+        </p>
+      </section>
+      <section id="unreal">
+        <h2>UNREAL ENGINE</h2>
+        <p>Építészeti munkáim megkönnyítője ...folytköv</p>
+      </section>
+      <section id="work">
+        <h2>Aktuális munkahely:</h2>
+
+        Aranyponty Zrt. - manager Napi faladataim: Marketing kommunikáció,
+        fotózás-videózás, webszerkesztés, Facebook kommunikáció, nyomdai anyagok
+        tördelése, építészeti-vízügyi tervezés, kivitelezés, beruházás
+        előkészítés, pályázatok végigvitele. Kiállítások-kampányok tervezése és
+        kivitelezése.
+      </section>
+    </article>
+  </body>
+  <footer>
+    <nav>
+      <a id="footer"></a>
+      NAVIGÁCIÓ: <a href="#teteje"> Teteje</a>
+    </nav>
+  </footer>
 </html>

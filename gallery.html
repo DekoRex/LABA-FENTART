@@ -1,73 +1,132 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FentArt Introduce</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:url"                content="http://www.fentart.hu/" />
-	<meta property="og:type"               content="article" />
-	<meta property="og:title"              content="FentArt Gallery" />
-	<meta property="og:description"        content="bemutatkozó oldal" />
-	<meta property="og:image"              content="#" />
-	<link rel='stylesheet' id='style-css'  href='style.css' type='text/css' media='all' />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<script>function myFunction() {
-		var x = document.getElementById("mainmenu");
-		if (x.style.display === "block") {
-		  x.style.display = "none";
-		} else {
-		  x.style.display = "block";
-		}
-	  }</script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FentArt Introduce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="http://www.fentart.hu/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FentArt Gallery" />
+    <meta property="og:description" content="bemutatkozó oldal" />
+    <meta property="og:image" content="#" />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-
-</head>
-  <header> 
+    <!-- a script amely kikapcsolja a menüt  -->
+    <script>
+      function menuoff() {
+        const menustate = document.getElementById("mainmenu");
+        if (menustate.style.display === "block") {
+          menustate.style.display = "none";
+        } else {
+          menustate.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <header>
     <nav>
-		<a id="teteje"></a>
-		<menu id="mainmenu">
-			<ul>
-			<li><a href="index.html"> Vissza</a></li>
-			<li><a href="contact.html"> Kontakt</a></li>
-		</ul>
-	</menu>
-<div class=burger>
-<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-</a>
-</div>
-		<!-- Téma választó -->
-		<div class="mg-toolbar">Témaválasztó: 
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="dark" type="radio" name="THEME" value="dark"><label for="Dark">Dark</label>	</div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">		
-			  <input class="theme-list" id="red" type="radio" name="THEME" value="red"><label for="Red">Red</label></div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="normal" type="radio" name="THEME" value="normal"><label for="Normal">Normal</label></div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="blue" type="radio" name="THEME" value="blue"><label for="Blue">Blue</label></div>
-		  </div>
-		<!-- Téma választó -->
+      <a id="teteje"></a>
+      <menu id="mainmenu">
+        <ul>
+          <li><a href="index.html"> Vissza</a></li>
+          <li><a href="contact.html"> Kontakt</a></li>
+        </ul>
+      </menu>
+      <div class="burger">
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="menuoff()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- Téma választó -->
+      <div class="mg-toolbar">
+        Témaválasztó:
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="dark"
+            type="radio"
+            name="THEME"
+            value="dark"
+          /><label for="Dark">Dark</label>
+        </div>
 
-  </nav>
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="red"
+            type="radio"
+            name="THEME"
+            value="red"
+          /><label for="Red">Red</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="normal"
+            type="radio"
+            name="THEME"
+            value="normal"
+          /><label for="Normal">Normal</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="blue"
+            type="radio"
+            name="THEME"
+            value="blue"
+          /><label for="Blue">Blue</label>
+        </div>
+      </div>
+      <!-- Téma választó -->
+    </nav>
   </header>
   <body>
-	<div class="responsive">
-	<div class="gallery"><img src="https://fentart.com/sites/default/files/artworks/_MG_3787.jpg" alt=""></div>
+    <div class="responsive">
+      <div class="gallery">
+        <img
+          src="https://fentart.com/sites/default/files/artworks/_MG_3787.jpg"
+          alt=""
+        />
+      </div>
     </div>
-	<div class="responsive">
-		<div class="gallery"><img src="https://fentart.com/sites/default/files/artworks/20210105_181040.jpg" alt="Acélakt"></div>
-	</div>
-	<div class="responsive">
-			<div class="gallery"><img src="https://fentart.com/sites/default/files/artworks/arnie.jpg" alt="Arnold és a festményem"></div>
-	</div>
-	<div class="responsive">
-				<div class="gallery"><img src="https://fentart.com/sites/default/files/artworks/nyugalom.jpg" alt="nyugalom"></div>
-	</div>
+    <div class="responsive">
+      <div class="gallery">
+        <img
+          src="https://fentart.com/sites/default/files/artworks/20210105_181040.jpg"
+          alt="Acélakt"
+        />
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+        <img
+          src="https://fentart.com/sites/default/files/artworks/arnie.jpg"
+          alt="Arnold és a festményem"
+        />
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+        <img
+          src="https://fentart.com/sites/default/files/artworks/nyugalom.jpg"
+          alt="nyugalom"
+        />
+      </div>
+    </div>
   </body>
+</html>

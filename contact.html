@@ -1,79 +1,141 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FentArt Introduce</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:url"                content="http://www.fentart.hu/" />
-	<meta property="og:type"               content="article" />
-	<meta property="og:title"              content="FentArt introduce" />
-	<meta property="og:description"        content="bemutatkozó oldal" />
-	<meta property="og:image"              content="#" />
-	<link rel='stylesheet' href='bootstrap.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='style-css'  href='style.css' type='text/css' media='all' />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<script>function myFunction() {
-		var x = document.getElementById("mainmenu");
-		if (x.style.display === "block") {
-		  x.style.display = "none";
-		} else {
-		  x.style.display = "block";
-		}
-	  }</script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FentArt Introduce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="http://www.fentart.hu/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FentArt introduce" />
+    <meta property="og:description" content="bemutatkozó oldal" />
+    <meta property="og:image" content="#" />
+    <link rel="stylesheet" href="bootstrap.css" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-</head>
-  <header> 
+    <!-- a script amely kikapcsolja a menüt  -->
+    <script>
+      function menuoff() {
+        const menustate = document.getElementById("mainmenu");
+        if (menustate.style.display === "block") {
+          menustate.style.display = "none";
+        } else {
+          menustate.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <header>
     <nav>
-		<a id="teteje"></a>
-		<menu id="mainmenu">
-			<ul>
-			<li><a href="index.html"> Vissza</a></li>
-			<li><a href="Gallery.html"> Galéria</a></li>
-		</ul>
-    </menu>
-<div class=burger>
-<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-</a>
-</div>
+      <a id="teteje"></a>
+      <menu id="mainmenu">
+        <ul>
+          <li><a href="index.html"> Vissza</a></li>
+          <li><a href="Gallery.html"> Galéria</a></li>
+        </ul>
+      </menu>
+      <div class="burger">
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="menuoff()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
 
-		<!-- Téma választó -->
-		<div class="mg-toolbar">Témaválasztó: 
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="dark" type="radio" name="THEME" value="dark"><label for="Dark">Dark</label>	</div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">		
-			  <input class="theme-list" id="red" type="radio" name="THEME" value="red"><label for="Red">Red</label></div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="normal" type="radio" name="THEME" value="normal"><label for="Normal">Normal</label></div>
-	
-			<div class="mg-option checkbox-custom checkbox-inline">
-			  <input class="theme-list" id="blue" type="radio" name="THEME" value="blue"><label for="Blue">Blue</label></div>
-		  </div>
-		<!-- Téma választó -->
- 
-  </nav>
+      <!-- Téma választó -->
+      <div class="mg-toolbar">
+        Témaválasztó:
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="dark"
+            type="radio"
+            name="THEME"
+            value="dark"
+          /><label for="Dark">Dark</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="red"
+            type="radio"
+            name="THEME"
+            value="red"
+          /><label for="Red">Red</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="normal"
+            type="radio"
+            name="THEME"
+            value="normal"
+          /><label for="Normal">Normal</label>
+        </div>
+
+        <div class="mg-option checkbox-custom checkbox-inline">
+          <input
+            class="theme-list"
+            id="blue"
+            type="radio"
+            name="THEME"
+            value="blue"
+          /><label for="Blue">Blue</label>
+        </div>
+      </div>
+      <!-- Téma választó -->
+    </nav>
   </header>
+
   <body>
-    <div class="mb-3 framed"> <h3>Cikk küldése ismerősnek</h3>
-        <form action="" name="Cikk küldése ismerősnek">
+    <div class="mb-3 framed">
+      <h3>Cikk küldése ismerősnek</h3>
+      <form action="" name="Cikk küldése ismerősnek">
         <div>
-            <label class="form-label" for="nev">Név:</label> <input type="text" class="form-control" name="név" id="nev" required>
-            <label class="form-label" for="tel">Telefonszám:</label><input type="tel" class="form-control" name="tel" id="tel">
-            <label class="form-label" for="E-mail">E-mail cím:</label><input type="email" class="form-control" name="email" id="E-mail"required>
-            <label class="form-label" for="kora">Kora:</label><input type="number" class="form-control" name="kor" id="kora">
-            <label class="form-label" for="message">Üzenet:</label><input type="text" class="form-control" name="message" id="message">
-            <button class="btn btn-primary" type="submit" >Elküld</button>
-        </button>
-        
+          <label class="form-label" for="nev">Név:</label>
+          <input
+            type="text"
+            class="form-control"
+            name="név"
+            id="nev"
+            required
+          />
+          <label class="form-label" for="tel">Telefonszám:</label
+          ><input type="tel" class="form-control" name="tel" id="tel" />
+          <label class="form-label" for="E-mail">E-mail cím:</label
+          ><input
+            type="email"
+            class="form-control"
+            name="email"
+            id="E-mail"
+            required
+          />
+          <label class="form-label" for="kora">Kora:</label
+          ><input type="number" class="form-control" name="kor" id="kora" />
+          <label class="form-label" for="message">Üzenet:</label
+          ><input
+            type="text"
+            class="form-control"
+            name="message"
+            id="message"
+          />
+          <button class="btn btn-primary" type="submit">Elküld</button>
         </div>
-        
-        </form>
-        </div>
-        <div class="framed"><a href="https://fentart.com" target="_blank">weboldalam</a> </div>
-    
+      </form>
+    </div>
+    <div class="framed">
+      <a href="https://fentart.com" target="_blank">weboldalam</a>
+    </div>
   </body>
+</html>
